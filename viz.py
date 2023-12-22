@@ -1,26 +1,30 @@
-import curses
-import random
+from utils import PIPE_CHARS
 
-NUM_ROWS = 20
-NUM_COLS = 40
 PADDING_V = 1
 PADDING_H = 2
-PIPE_CHARS = ["═", "║", "╗", "╝", "╔", "╚", "╬"]
-PIPE_DENSITY = 0.5
 
-def render_pipes(stdscr):
+def render_pipes(stdscr, pipes, num, reward):
     stdscr.clear()
-    for h in range(NUM_COLS):
-        for v in range(NUM_ROWS):
-            if random.random() < PIPE_DENSITY:
-                stdscr.addstr(
-                    v + PADDING_V,
-                    h + PADDING_H,
-                    random.choice(PIPE_CHARS)
-                )
+    for i, p in enumerate(pipes):
+        stdscr.addstr(
+            PADDING_V + i,
+            PADDING_H,
+            "".join(p)
+        )
+
+    stdscr.addstr(
+        PADDING_V + len(pipes) + 1,
+        PADDING_H,
+       f"Episode: {num}"
+    )
+
+    stdscr.addstr(
+        PADDING_V + len(pipes) + 2,
+        PADDING_H,
+       f"Reward: {reward}"
+    )
 
     stdscr.refresh()
-    stdscr.getch()
 
 
-curses.wrapper(render_pipes)
+
