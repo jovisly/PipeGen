@@ -26,7 +26,7 @@ A popular algorithm for procedural generation is [Wave Function Collapse](https:
 input is a small image that encapsulates the rules of the pattern. The output is
 a much larger (or infinite) image replicated based on such pattern.
 
-Heere we already have the rules described in `utils.py`, so we just assign weights
+Here we already have the rules described in `utils.py`, so we just assign weights
 to the tiles that allow us to pick based on entropy (weights, probability, and
 entropy are all related). Then, we can progressively "collapse" the tiles based
 on the rules. We can also tune the weights for different density or patterns of
