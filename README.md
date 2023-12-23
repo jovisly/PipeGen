@@ -1,4 +1,4 @@
-# Reinforcement Learning for Continuous Pipe Generation
+# Algorithms for Continuous Pipe Generation
 
 I like pipe puzzles ever since I first encountered [Pipe Mania](https://en.wikipedia.org/wiki/Pipe_Mania). There's some mathematical elegance in the setup
 of the game. Moreover, it's a simple form of procedural generation, which is
