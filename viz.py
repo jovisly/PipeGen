@@ -18,11 +18,12 @@ def render_pipes(stdscr, pipes, num, reward):
        f"Episode: {num}"
     )
 
-    stdscr.addstr(
-        PADDING_V + len(pipes) + 2,
-        PADDING_H,
-       f"Reward: {reward}"
-    )
+    if reward is not None:
+        stdscr.addstr(
+            PADDING_V + len(pipes) + 2,
+            PADDING_H,
+        f"Reward: {reward}"
+        )
 
     stdscr.refresh()
 

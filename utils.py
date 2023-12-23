@@ -9,7 +9,6 @@ SET_U_END = {" ", "═", "╝", "╚"}
 SET_D_CON = {"║", "╬", "╝", "╚"}
 SET_D_END = {" ", "═", "╗", "╔"}
 
-
 ALLOWED_CONFIG = {
     "═": {
         "u": SET_U_END,
@@ -59,4 +58,16 @@ ALLOWED_CONFIG = {
         "l": SET_L_END,
         "r": SET_R_END,
     },
+}
+
+
+PIPE_CHARS_WEIGHTS = {
+    "═": 4,
+    "║": 4,
+    "╗": 4,
+    "╝": 4,
+    "╔": 4,
+    "╚": 4,
+    "╬": 3,
+    " ": 8,
 }
